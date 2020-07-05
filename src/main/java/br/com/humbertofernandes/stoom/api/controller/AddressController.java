@@ -39,12 +39,12 @@ public class AddressController {
     public ResponseEntity<Address> create(@Valid @RequestBody Address address, HttpServletResponse response) {
         Address addressSave = service.save(address);
         publisher.publishEvent(new ResourceCreatedEvent(this, response, addressSave.getId()));
-        return ResponseEntity.ok(addressSave);
+        return ResponseEntity.status(HttpStatus.CREATED).body(addressSave);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Address> update(@PathVariable Long id, @Valid @RequestBody Address address) {
-        return ResponseEntity.status(HttpStatus.OK).body(service.update(id, address));
+        return ResponseEntity.ok(service.update(id, address));
     }
 
     @DeleteMapping("/{id}")

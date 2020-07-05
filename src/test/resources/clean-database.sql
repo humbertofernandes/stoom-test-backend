@@ -1,0 +1,2 @@
+DELETE FROM endereco;
+ALTER SEQUENCE endereco_id_seq RESTART WITH 1;
