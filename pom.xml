@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.humbertofernandes</groupId>
 	<artifactId>stoom-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>stoom-api</name>
 	<description>Stoom backend qualification test</description>
 
